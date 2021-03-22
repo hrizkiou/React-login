@@ -10,10 +10,8 @@ export default class Reset extends Component {
                     <div className="col-md-5 pr-lg-5 mb-5 mb-md-0">
                         <img src="https://res.cloudinary.com/mhmd/image/upload/v1569543678/form_d9sh6m.svg" alt=""
                              className="img-fluid mb-3 d-md-block"/>
-                        <h1></h1>
-
                     </div>
-                    {/* Registeration Form */}
+                    {/* Registration Form */}
                     <div className="col-md-7 col-lg-6 ml-auto">
                         <form action="#">
                             <div className="row">
@@ -29,7 +27,7 @@ export default class Reset extends Component {
                                 </div>
                                 {/* Submit Button */}
                                 <div className="form-group col-lg-12 mx-auto mb-0">
-                                    <a href="#" className="btn btn-primary btn-block py-2">
+                                    <a href="https://google.com" className="btn btn-primary btn-block py-2">
                                         <span className="font-weight-bold">Login</span>
                                     </a>
                                 </div>
@@ -41,8 +39,7 @@ export default class Reset extends Component {
                                 </div>
                                 {/* Already Registered */}
                                 <div className="text-center w-100">
-                                    <p className="text-muted font-weight-bold">Already Registred? <a href=""
-                                                                                                         className="text-primary ml-2">Login</a>
+                                    <p className="text-muted font-weight-bold">Already Registred? <a href="/login" className="text-primary ml-2">Login</a>
                                     </p>
                                 </div>
                             </div>

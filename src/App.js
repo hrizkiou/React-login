@@ -1,5 +1,6 @@
 import './App.css';
-import React, { useState } from "react";
+import React from "react";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 // import ChatBody from "./components/chatBody/ChatBody";
 // import ChatList from "./components/chatList/ChatList";
 // import UserProfile from "./components/userProfile/UserProfile";
@@ -9,12 +10,14 @@ import Reset from "./components/login/Reset";
 
 
 function App() {
-    const [theme, setTheme] = useState('dark');
   return (
       <div>
-          <Login />
-          {/*<Register />*/}
-          <Reset />
+          <Router>
+              <Route path='/' exact component={Login} />
+              <Route path='/Register' exact component={Register} />
+              <Route path='/login' exact component={Login} />
+              <Route path='/Reset' exact component={Reset} />
+          </Router>
       </div>
   );
 }

@@ -1,16 +1,16 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
 
 export default class Register extends Component {
-
-    render(){
+    render() {
         return (
             <div className="container">
                 <div className="row py-5 mt-4 align-items-center">
-                    {/* For Demo Purpose */}
                     <div className="col-md-5 pr-lg-5 mb-5 mb-md-0">
-                        <img src="https://res.cloudinary.com/mhmd/image/upload/v1569543678/form_d9sh6m.svg" alt="" className="img-fluid mb-3 d-md-block" />
-                        <h1></h1>
-
+                        <img
+                            src="https://res.cloudinary.com/mhmd/image/upload/v1569543678/form_d9sh6m.svg"
+                            alt=""
+                            className="img-fluid mb-3 d-md-block"
+                        />
                     </div>
                     {/* Registeration Form */}
                     <div className="col-md-7 col-lg-6 ml-auto">
@@ -23,7 +23,13 @@ export default class Register extends Component {
                       <i className="fa fa-user text-muted" />
                     </span>
                                     </div>
-                                    <input id="firstName" type="text" name="firstname" placeholder="First Name" className="form-control bg-white border-left-0 border-md" />
+                                    <input
+                                        id="firstName"
+                                        type="text"
+                                        name="firstname"
+                                        placeholder="First Name"
+                                        className="form-control bg-white border-left-0 border-md"
+                                    />
                                 </div>
                                 {/* Last Name */}
                                 <div className="input-group col-lg-6 mb-4">
@@ -32,7 +38,13 @@ export default class Register extends Component {
                       <i className="fa fa-user text-muted" />
                     </span>
                                     </div>
-                                    <input id="lastName" type="text" name="lastname" placeholder="Last Name" className="form-control bg-white border-left-0 border-md" />
+                                    <input
+                                        id="lastName"
+                                        type="text"
+                                        name="lastname"
+                                        placeholder="Last Name"
+                                        className="form-control bg-white border-left-0 border-md"
+                                    />
                                 </div>
                                 {/* Email Address */}
                                 <div className="input-group col-lg-12 mb-4">
@@ -41,7 +53,13 @@ export default class Register extends Component {
                       <i className="fa fa-envelope text-muted" />
                     </span>
                                     </div>
-                                    <input id="email" type="email" name="email" placeholder="Email Address" className="form-control bg-white border-left-0 border-md" />
+                                    <input
+                                        id="email"
+                                        type="email"
+                                        name="email"
+                                        placeholder="Email Address"
+                                        className="form-control bg-white border-left-0 border-md"
+                                    />
                                 </div>
                                 {/* Username Address */}
                                 <div className="input-group col-lg-12 mb-4">
@@ -50,7 +68,13 @@ export default class Register extends Component {
                       <i className="fa fa-envelope text-muted" />
                     </span>
                                     </div>
-                                    <input id="username" type="text" name="username" placeholder="Username" className="form-control bg-white border-left-0 border-md" />
+                                    <input
+                                        id="username"
+                                        type="text"
+                                        name="username"
+                                        placeholder="Username"
+                                        className="form-control bg-white border-left-0 border-md"
+                                    />
                                 </div>
                                 {/* Password */}
                                 <div className="input-group col-lg-6 mb-4">
@@ -59,7 +83,13 @@ export default class Register extends Component {
                       <i className="fa fa-lock text-muted" />
                     </span>
                                     </div>
-                                    <input id="password" type="password" name="password" placeholder="Password" className="form-control bg-white border-left-0 border-md" />
+                                    <input
+                                        id="password"
+                                        type="password"
+                                        name="password"
+                                        placeholder="Password"
+                                        className="form-control bg-white border-left-0 border-md"
+                                    />
                                 </div>
                                 {/* Password Confirmation */}
                                 <div className="input-group col-lg-6 mb-4">
@@ -68,29 +98,47 @@ export default class Register extends Component {
                       <i className="fa fa-lock text-muted" />
                     </span>
                                     </div>
-                                    <input id="passwordConfirmation" type="text" name="passwordConfirmation" placeholder="Confirm Password" className="form-control bg-white border-left-0 border-md" />
+                                    <input
+                                        id="passwordConfirmation"
+                                        type="text"
+                                        name="passwordConfirmation"
+                                        placeholder="Confirm Password"
+                                        className="form-control bg-white border-left-0 border-md"
+                                    />
                                 </div>
                                 {/* Submit Button */}
                                 <div className="form-group col-lg-12 mx-auto mb-0">
-                                    <a href="#" className="btn btn-primary btn-block py-2">
-                                        <span className="font-weight-bold">Create your account</span>
+                                    <a
+                                        href="https://google.com"
+                                        className="btn btn-primary btn-block py-2"
+                                    >
+                    <span className="font-weight-bold">
+                      Create your account
+                    </span>
                                     </a>
                                 </div>
                                 {/* Divider Text */}
                                 <div className="form-group col-lg-12 mx-auto d-flex align-items-center my-4">
                                     <div className="border-bottom w-100 ml-5" />
-                                    <span className="px-2 small text-muted font-weight-bold text-muted">OR</span>
+                                    <span className="px-2 small text-muted font-weight-bold text-muted">
+                    OR
+                  </span>
                                     <div className="border-bottom w-100 mr-5" />
                                 </div>
                                 {/* Already Registered */}
                                 <div className="text-center w-100">
-                                    <p className="text-muted font-weight-bold">Already Registered? <a href="" className="text-primary ml-2">Login</a></p>
+                                    <p className="text-muted font-weight-bold">
+                                        Already Registered?{" "}
+                                        <a href="/login" className="text-primary ml-2">
+                                            Login
+                                        </a>
+                                    </p>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-    )
+        );
     }
 }
