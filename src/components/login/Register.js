@@ -1,6 +1,50 @@
 import React, { Component } from "react";
+// import Config from "../../config";
 
 export default class Register extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            username: "",
+            email: "",
+            firstname: "",
+            lastname: "",
+            password: ""
+        };
+
+        // required to call function with 'this'
+        this.sendForm = this.sendForm.bind(this);
+        this.updateValue = this.updateValue.bind(this);
+    }
+
+    sendForm(e) {
+
+        console.log(this.state)
+        e.preventDefault();
+        // fetch(`${Config.host}:${Config.ports.server}/sign/up`, {
+        //     method: "POST",
+        //     headers:{
+        //         "Content-Type": "application/json"
+        //     },
+        //     credentials: "include",
+        //     body: JSON.stringify(this.state)
+        // }).then(response => {
+        //     return response.json();
+        // }).then(json => {
+        //     if (json.status === 200) {
+        //         this.props.history.push("/sign/in");
+        //         message("success", "You registered successfuly")
+        //     }
+        //     else
+        //         message("error", json.message);
+        // });
+
+    }
+
+    updateValue(e) {
+        e.preventDefault();
+        this.setState({[e.target.name]: e.target.value});
+    }
     render() {
         return (
             <div className="container">
@@ -12,7 +56,7 @@ export default class Register extends Component {
                             className="img-fluid mb-3 d-md-block"
                         />
                     </div>
-                    {/* Registeration Form */}
+                    {/* Registration Form */}
                     <div className="col-md-7 col-lg-6 ml-auto">
                         <form action="#">
                             <div className="row">
@@ -29,6 +73,8 @@ export default class Register extends Component {
                                         name="firstname"
                                         placeholder="First Name"
                                         className="form-control bg-white border-left-0 border-md"
+                                        onChange={ this.updateValue }
+                                        autoComplete="on"
                                     />
                                 </div>
                                 {/* Last Name */}
@@ -44,6 +90,8 @@ export default class Register extends Component {
                                         name="lastname"
                                         placeholder="Last Name"
                                         className="form-control bg-white border-left-0 border-md"
+                                        onChange={ this.updateValue }
+                                        autoComplete="on"
                                     />
                                 </div>
                                 {/* Email Address */}
@@ -59,6 +107,8 @@ export default class Register extends Component {
                                         name="email"
                                         placeholder="Email Address"
                                         className="form-control bg-white border-left-0 border-md"
+                                        onChange={ this.updateValue }
+                                        autoComplete="on"
                                     />
                                 </div>
                                 {/* Username Address */}
@@ -74,10 +124,12 @@ export default class Register extends Component {
                                         name="username"
                                         placeholder="Username"
                                         className="form-control bg-white border-left-0 border-md"
+                                        onChange={ this.updateValue }
+                                        autoComplete="on"
                                     />
                                 </div>
                                 {/* Password */}
-                                <div className="input-group col-lg-6 mb-4">
+                                <div className="input-group col-lg-12 mb-4">
                                     <div className="input-group-prepend">
                     <span className="input-group-text bg-white px-4 border-md border-right-0">
                       <i className="fa fa-lock text-muted" />
@@ -89,40 +141,19 @@ export default class Register extends Component {
                                         name="password"
                                         placeholder="Password"
                                         className="form-control bg-white border-left-0 border-md"
-                                    />
-                                </div>
-                                {/* Password Confirmation */}
-                                <div className="input-group col-lg-6 mb-4">
-                                    <div className="input-group-prepend">
-                    <span className="input-group-text bg-white px-4 border-md border-right-0">
-                      <i className="fa fa-lock text-muted" />
-                    </span>
-                                    </div>
-                                    <input
-                                        id="passwordConfirmation"
-                                        type="text"
-                                        name="passwordConfirmation"
-                                        placeholder="Confirm Password"
-                                        className="form-control bg-white border-left-0 border-md"
+                                        onChange={ this.updateValue }
+                                        autoComplete="on"
                                     />
                                 </div>
                                 {/* Submit Button */}
                                 <div className="form-group col-lg-12 mx-auto mb-0">
-                                    <a
-                                        href="https://google.com"
-                                        className="btn btn-primary btn-block py-2"
-                                    >
-                    <span className="font-weight-bold">
-                      Create your account
-                    </span>
-                                    </a>
+                                    <button className="btn btn-primary btn-block py-2" onClick={this.sendForm} variant="outline-dark">Create your account</button>
                                 </div>
+
                                 {/* Divider Text */}
                                 <div className="form-group col-lg-12 mx-auto d-flex align-items-center my-4">
                                     <div className="border-bottom w-100 ml-5" />
-                                    <span className="px-2 small text-muted font-weight-bold text-muted">
-                    OR
-                  </span>
+                                    <span className="px-2 small text-muted font-weight-bold text-muted">OR</span>
                                     <div className="border-bottom w-100 mr-5" />
                                 </div>
                                 {/* Already Registered */}

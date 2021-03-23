@@ -3,14 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e2d36385-7d39-4c09-8423-5045e40637e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/login/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/login/Reset.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/Reset.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login/login.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +60,9 @@
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
@@ -147,7 +147,10 @@
       <option name="presentableId" value="Default" />
       <updated>1616338172064</updated>
       <workItem from="1616338175986" duration="5840000" />
-      <workItem from="1616359806429" duration="5887000" />
+      <workItem from="1616359806429" duration="9874000" />
+      <workItem from="1616448955074" duration="10000" />
+      <workItem from="1616449274680" duration="5285000" />
+      <workItem from="1616504140775" duration="2034000" />
     </task>
     <servers />
   </component>
@@ -190,8 +193,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/setupTests.js">

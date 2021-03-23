@@ -18,6 +18,7 @@ function App() {
               <Route path='/login' exact component={Login} />
               <Route path='/Reset' exact component={Reset} />
           </Router>
+          {/*<Form />*/}
       </div>
   );
 }

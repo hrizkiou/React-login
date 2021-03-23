@@ -1,7 +1,49 @@
 import React, { Component } from "react";
 import {Link} from "react-router-dom";
+// import Config from "../../config";
 
 export default class Login extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            email: "",
+            password: ""
+        };
+
+        // required to call function with 'this'
+        this.sendForm = this.sendForm.bind(this);
+        this.updateValue = this.updateValue.bind(this);
+    }
+
+    sendForm(e) {
+        console.log(this.state);
+        // e.preventDefault();
+
+        // fetch(`${Config.host}:${Config.ports.server}/sign/up`, {
+        //     method: "POST",
+        //     headers:{
+        //         "Content-Type": "application/json"
+        //     },
+        //     credentials: "include",
+        //     body: JSON.stringify(this.state)
+        // }).then(response => {
+        //     return response.json();
+        // }).then(json => {
+        //     if (json.status === 200) {
+        //         this.props.history.push("/sign/in");
+        //         message("success", "You registered successfuly")
+        //     }
+        //     else
+        //         message("error", json.message);
+        // });
+
+    }
+
+    updateValue(e) {
+        e.preventDefault();
+        this.setState({[e.target.name]: e.target.value});
+    }
+
     render() {
         return (
             <div className="container">
@@ -32,6 +74,7 @@ export default class Login extends Component {
                                         placeholder="Email Address"
                                         className="form-control bg-white border-left-0 border-md"
                                         onChange={ this.updateValue }
+                                        autoComplete="on"
                                     />
                                 </div>
 
@@ -49,6 +92,7 @@ export default class Login extends Component {
                                         placeholder="Password"
                                         className="form-control bg-white border-left-0 border-md"
                                         onChange={ this.updateValue }
+                                        autoComplete="on"
                                     />
                                 </div>
                                 {/* Submit Button */}
@@ -67,6 +111,19 @@ export default class Login extends Component {
                                         Don't have an account? {' '}
                                         <Link to="/register">Register</Link>
                                 </p>
+                                </div>
+                                {/* Divider Text */}
+                                <div className="form-group col-lg-12 mx-auto d-flex align-items-center my-4">
+                                    <div className="border-bottom w-100 ml-5" />
+                                    <span className="px-2 small text-muted font-weight-bold text-muted">OR</span>
+                                    <div className="border-bottom w-100 mr-5" />
+                                </div>
+                                {/* Already Registered */}
+                                <div className="text-center w-100">
+                                    <p className="text-muted font-weight-bold">
+                                        Forgot password? {' '}
+                                        <Link to="/reset">Reset</Link>
+                                    </p>
                                 </div>
                             </div>
                         </form>
